@@ -1,1 +1,38 @@
 # pythonproject-03
+its a rock paper scissors game
+import random
+user_wins=0
+computer_wins=0
+print("welcome to the rock paper scissors game")
+while True:
+  
+    
+     user_input= input("choose :")
+     l=["rock","paper","scissors"]
+     computer_input= random.choice(l)
+     print("NIVAN :"+str(computer_input))
+
+
+     if user_input==computer_input:
+         print("draw")
+     
+     elif user_input=="paper" and computer_input=="rock" :
+          print("AUM WINS")
+          user_wins+=1
+     elif user_input=="scissors" and computer_input=="paper":
+       print("AUM WINS")
+       user_wins+=1
+     elif user_input=="rock"and computer_input=="scissors":
+            print("AUM WINS")
+            user_wins+=1
+     else:
+       print("NIVAN WINS")
+       computer_wins+=1
+       play_again = input("Do you want to play again? (yes/no): ")
+       if play_again.lower() != "yes":
+         break
+
+
+print("AUM WIN"+str(user_wins))
+print("NIVAN WIN:"+str(computer_wins))
+print('see you next time ')
